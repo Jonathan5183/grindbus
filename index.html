@@ -2,250 +2,289 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GrindBus</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #f5f7fa;
-      color: #333;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #0e1d34cc;
-      padding: 1rem 2rem;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    nav .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #00d0ff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 1.5rem;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-
-    nav ul li a:hover {
-      color: #00d0ff;
-    }
-
-    .hero {
-      height: 100vh;
-      background: linear-gradient(to right, #002347, #005577);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/cubes.png');
-      opacity: 0.05;
-      z-index: 0;
-    }
-
-    .hero > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 2px 6px rgba(0,0,0,0.3);
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-
-    .hero button {
-      padding: 0.9rem 2.2rem;
-      font-size: 1.05rem;
-      border: none;
-      border-radius: 12px;
-      background: #00d0ff;
-      color: #002347;
-      cursor: pointer;
-      font-weight: 600;
-      animation: pulse 2s infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hero button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 36px rgba(0, 208, 255, 0.6);
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0, 208, 255, 0.4); }
-      70% { box-shadow: 0 0 0 15px rgba(0, 208, 255, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0, 208, 255, 0); }
-    }
-
-    section.stub {
-      padding: 80px 2rem;
-      text-align: center;
-    }
-
-    #book, #about, #contact, #testimonials {
-      background-color: #fff;
-    }
-
-    #book h2, #about h2, #contact h2, #testimonials h2 {
-      font-size: 2rem;
-      color: #002347;
-      margin-bottom: 0.5rem;
-    }
-
-    #book p, #about p, #contact p, #testimonials p {
-      color: #555;
-      font-size: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 400px;
-      margin: 2rem auto 0;
-    }
-
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1rem;
-    }
-
-    button[type="submit"] {
-      background: #00d0ff;
-      color: #002347;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-      padding: 0.75rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button[type="submit"]:hover {
-      background: #00aacc;
-    }
-
-    .footer {
-      background: #0e1d34;
-      color: #aaa;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GrindBus - The Future of Bus Travel. Book your journey seamlessly." />
+  <title>GrindBus - Your Next Journey Awaits</title>
+  <!-- Link to the advanced CSS file -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Orbitron for headings, Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <nav>
+  <!-- Custom Scroll Progress Indicator -->
+  <div id="scroll-progress-indicator"></div>
+
+  <!-- Dynamic Cursor Trail -->
+  <div id="cursor-trail"></div>
+
+  <!-- 🌐 Navbar -->
+  <header class="navbar">
     <div class="logo">GrindBus</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#book">Book</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#features">Why Us</a>
+      <a href="#popular-routes">Popular Routes</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Support</a>
+      <a href="#" id="authButton" class="auth-button">Login / Sign Up</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
 
-  <section class="hero">
-    <h1>Your Ride. Your Rules.</h1>
-    <p>GrindBus is your next-gen bus booking experience — smooth, fast, and just the way you want it.</p>
-    <button onclick="document.getElementById('book').scrollIntoView({ behavior: 'smooth' });">
-      Book Tickets
-    </button>
+  <!-- 🚀 Hero Section -->
+  <section id="hero" class="hero">
+    <!-- Parallax background blobs (now actual DOM elements for better JS control) -->
+    <div class="parallax-blob blob-1"></div>
+    <div class="parallax-blob blob-2"></div>
+    <!-- Canvas for particle background -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-content">
+      <h1 class="animate">Your Hustle-Free Journey Starts Here</h1>
+      <p class="animate">Book inter-city bus tickets in an instant. Premium comfort, unbeatable prices.</p>
+      
+      <!-- Booking Form -->
+      <form class="booking-form animate">
+        <div class="input-group">
+            <i class="fas fa-map-marker-alt input-icon"></i>
+            <input type="text" id="fromLocation" placeholder="From" required />
+            <button type="button" class="clear-input-btn" data-target="fromLocation"><i class="fas fa-times-circle"></i></button>
+        </div>
+        <button type="button" class="swap-button" id="swapLocations">
+            <i class="fas fa-exchange-alt"></i>
+        </button>
+        <div class="input-group">
+            <i class="fas fa-map-marker-alt input-icon"></i>
+            <input type="text" id="toLocation" placeholder="To" required />
+            <button type="button" class="clear-input-btn" data-target="toLocation"><i class="fas fa-times-circle"></i></button>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-calendar-alt input-icon"></i>
+            <input type="date" id="travelDate" required />
+        </div>
+        <div class="input-group">
+            <i class="fas fa-users input-icon"></i>
+            <input type="number" id="passengers" placeholder="Passengers" value="1" min="1" required />
+        </div>
+        <button type="submit" class="cta-button">Find Buses</button>
+      </form>
+
+    </div>
   </section>
 
-  <section id="book" class="stub">
-    <h2>🗕 Book a Ride</h2>
-    <form>
-      <input type="text" placeholder="From" required />
-      <input type="text" placeholder="To" required />
-      <input type="date" required />
-      <button type="submit">Search Buses</button>
-    </form>
+  <!-- 💡 How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <h2 class="animate gradient-text">How It Works</h2>
+    <div class="steps-container">
+      <div class="step-box animate">
+        <div class="step-icon">1</div>
+        <h3>Enter Details</h3>
+        <p>Input your origin, destination, date, and number of passengers.</p>
+      </div>
+      <div class="step-box animate">
+        <div class="step-icon">2</div>
+        <h3>Choose Your Bus</h3>
+        <p>Browse available buses, compare prices, and select your preferred seat.</p>
+      </div>
+      <div class="step-box animate">
+        <div class="step-icon">3</div>
+        <h3>Secure Payment</h3>
+        <p>Complete your booking with our secure and fast payment gateway.</p>
+      </div>
+      <div class="step-box animate">
+        <div class="step-icon">4</div>
+        <h3>Receive Ticket</h3>
+        <p>Get your e-ticket instantly via email and SMS. Ready to travel!</p>
+      </div>
+    </div>
   </section>
 
-  <section id="about" class="stub">
-    <h2>🚌 About GrindBus</h2>
-    <p>We bring punctual, comfy, and clean bus travel — with next-gen tech.</p>
+  <!-- ⚙️ Features Section -->
+  <section id="features" class="features">
+    <h2 class="animate gradient-text">The GrindBus Advantage</h2>
+    <div class="features-container">
+      <!-- Feature Box 1 -->
+      <div class="feature-box animate">
+        <h3>🎟️ Instant Booking</h3>
+        <p>Search, select, and book your seat in under a minute with our streamlined and secure checkout process.</p>
+      </div>
+      <!-- Feature Box 2 -->
+      <div class="feature-box animate">
+        <h3>📍 Live Tracking</h3>
+        <p>Never wait in uncertainty again. Track your bus in real-time from the comfort of your device.</p>
+      </div>
+      <!-- Feature Box 3 -->
+      <div class="feature-box animate">
+        <h3>⭐ Best Prices & Offers</h3>
+        <p>We guarantee the best prices on top bus routes, with exclusive offers for our registered users.</p>
+      </div>
+    </div>
   </section>
 
-  <section id="testimonials" class="stub">
-    <h2>⭐ Rider Reviews</h2>
-    <p>"Amazing booking experience. Fast and reliable!" – Rakesh N.</p>
-    <p>"Smooth UI and real-time updates. Loved it!" – Sneha M.</p>
+  <!-- 🗺️ Popular Routes Section -->
+  <section id="popular-routes" class="popular-routes">
+    <h2 class="animate gradient-text">Popular Routes</h2>
+    <div class="routes-container">
+      <div class="route-card animate">
+        <h3>New York <i class="fas fa-long-arrow-alt-right route-arrow"></i> Boston</h3>
+        <p>Starting from $25</p>
+        <button class="cta-button-small">Book Now</button>
+      </div>
+      <div class="route-card animate">
+        <h3>Los Angeles <i class="fas fa-long-arrow-alt-right route-arrow"></i> San Francisco</h3>
+        <p>Starting from $35</p>
+        <button class="cta-button-small">Book Now</button>
+      </div>
+      <div class="route-card animate">
+        <h3>Chicago <i class="fas fa-long-arrow-alt-right route-arrow"></i> Indianapolis</h3>
+        <p>Starting from $20</p>
+        <button class="cta-button-small">Book Now</button>
+      </div>
+      <div class="route-card animate">
+        <h3>Dallas <i class="fas fa-long-arrow-alt-right route-arrow"></i> Houston</h3>
+        <p>Starting from $22</p>
+        <button class="cta-button-small">Book Now</button>
+      </div>
+    </div>
   </section>
 
-  <section id="contact" class="stub">
-    <h2>📞 Contact Us</h2>
-    <p>Reach out for help, feedback, or partnerships.</p>
-    <form>
+  <!-- 🗣️ Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2 class="animate gradient-text">What Our Riders Say</h2>
+    <div class="testimonials-container">
+      <div class="testimonial-box animate">
+        <p class="quote">"GrindBus made my last-minute trip so easy! The live tracking feature is a game-changer."</p>
+        <p class="author">- Alex R.</p>
+      </div>
+      <div class="testimonial-box animate">
+        <p class="quote">"Affordable prices and comfortable seats. GrindBus is my go-to for inter-city travel now."</p>
+        <p class="author">- Maya S.</p>
+      </div>
+      <div class="testimonial-box animate">
+        <p class="quote">"Excellent customer support and a seamless booking experience. Highly recommended!"</p>
+        <p class="author">- David L.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ❓ FAQ Section -->
+  <section id="faq" class="faq">
+    <h2 class="animate gradient-text">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item animate">
+        <div class="faq-question">
+          <h3>How do I book a ticket?</h3>
+          <i class="fas fa-chevron-down faq-arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>You can book a ticket by entering your origin, destination, date, and number of passengers in the booking form on the home page. Then, select your preferred bus and complete the secure payment process.</p>
+        </div>
+      </div>
+      <div class="faq-item animate">
+        <div class="faq-question">
+          <h3>Can I track my bus in real-time?</h3>
+          <i class="fas fa-chevron-down faq-arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, GrindBus offers live tracking for all journeys. Once your booking is confirmed, you will receive details on how to track your bus in real-time.</p>
+        </div>
+      </div>
+      <div class="faq-item animate">
+        <div class="faq-question">
+          <h3>What payment methods are accepted?</h3>
+          <i class="fas fa-chevron-down faq-arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We accept all major credit cards, debit cards, and popular digital wallets for secure and convenient payments.</p>
+        </div>
+      </div>
+      <div class="faq-item animate">
+        <div class="faq-question">
+          <h3>How can I cancel or modify my booking?</h3>
+          <i class="fas fa-chevron-down faq-arrow"></i>
+        </div>
+        <div class="faq-answer">
+          <p>You can manage your bookings through your account dashboard. Please refer to our cancellation and modification policy for details on applicable charges and timelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📬 Contact Section -->
+  <section id="contact" class="contact">
+    <h2 class="animate gradient-text">24/7 Customer Support</h2>
+    <form id="contact-form" class="animate">
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <textarea placeholder="How can we help?" required></textarea>
+      <button type="submit" class="btn">
+        Send Inquiry
+        <span class="icon">🚀</span>
+      </button>
     </form>
   </section>
 
+  <!-- 🧠 Footer -->
   <footer class="footer">
-    <p>&copy; 2025 GrindBus. All rights reserved.</p>
+    <p>&copy; 2025 GrindBus. All Rights Reserved. Redefining your travel experience.</p>
   </footer>
 
+  <!-- Login/Sign Up Modal -->
+  <div id="authModal" class="auth-modal-overlay">
+    <div class="auth-modal-content">
+      <button class="auth-modal-close-btn">&times;</button>
+      <div class="auth-forms-container">
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form active">
+          <h2>Login to GrindBus</h2>
+          <div class="input-group">
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" id="loginEmail" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="loginPassword" placeholder="Password" required />
+          </div>
+          <button type="submit" class="cta-button auth-submit-btn">Login</button>
+          <p class="auth-toggle-text">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+          <div id="loginError" class="auth-error-message"></div>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signupForm" class="auth-form">
+          <h2>Create Your Account</h2>
+          <div class="input-group">
+            <i class="fas fa-envelope input-icon"></i>
+            <input type="email" id="signupEmail" placeholder="Email" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="signupPassword" placeholder="Password" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock input-icon"></i>
+            <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required />
+          </div>
+          <button type="submit" class="cta-button auth-submit-btn">Sign Up</button>
+          <p class="auth-toggle-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+          <div id="signupError" class="auth-error-message"></div>
+        </form>
+      </div>
+      
+      <!-- User Info Display (Hidden by default) -->
+      <div id="userInfoDisplay" class="user-info-display">
+        <h2>Welcome, <span id="userEmailDisplay"></span>!</h2>
+        <p>User ID: <span id="userIdDisplay"></span></p>
+        <button id="logoutButton" class="cta-button">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to the JavaScript file for interactivity -->
+  <script src="script.js" type="module"></script>
 </body>
 </html>
