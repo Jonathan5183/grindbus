@@ -1,6 +1,6 @@
 /*
   ================================================================================
-  GrindBus - Next-Gen Interface CSS
+  GrindBus - Next-Gen Interface CSS (Revised)
   Author: Gemini (Senior Frontend Engineer & UI/UX Visionary)
   Description: A futuristic, high-fidelity stylesheet with glassmorphism,
                advanced animations, and a sleek, modern aesthetic.
@@ -72,6 +72,7 @@ body {
     background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 1px, transparent 1px);
     background-size: 40px 40px;
     cursor: none; /* Hide default cursor */
+    /* REMOVED opacity and transition to prevent blank screen */
 }
 
 h1, h2, h3 {
